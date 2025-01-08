@@ -34,7 +34,7 @@ function Home() {
       </nav>
       <div className="home lg:w-3/4 w-full mx-auto flex sm:flex-nowrap flex-wrap ">
         <div className="hero sm:basis-2/4 basis-full flex justify-center sm:order-1 order-2">
-          <img src="https://res.cloudinary.com/daul01w0g/image/upload/v1735877854/binex2_pgbvsw.png" alt="hero" />
+          <img src="https://res.cloudinary.com/daul01w0g/image/upload/v1736075124/20250104_091927_neohtt.png" alt="hero" />
         </div>
         <div className="text sm:basis-2/4 basis-full flex items-center p-3 sm:text-left text-center sm:order-2 order-1">
           <div className="container">

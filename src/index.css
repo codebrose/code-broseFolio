@@ -7,13 +7,25 @@
     background: #020d1f;
   }
   .bg-custom-soft{
-    background: #051a3d;
+    background: #031129;
+  }
+  .bg-custom-card{
+    background: #091d41;
   }
   .border-custom{
     border-bottom: 1px solid #051a3d;
   }
   .h-custom{
     height: min(700px, 100vh);
+  }
+  .filter-invert{
+    filter: invert(100%);
+  }
+  .filter-sky-600{
+    filter: invert(33%) sepia(95%) saturate(1071%) hue-rotate(173deg) brightness(95%) contrast(98%);
+  }
+  .basis-custom{
+    flex-basis: 250px;
   }
 }
 
@@ -22,9 +34,12 @@
   margin: 0;
 }
 .hero img{
-  width: 360px;
+  width: 400px;
   object-fit: cover;
 }
 .bgSlit{
   bottom: -20px;
+}
+.serviceCard img{
+  width: 64px;
 }
