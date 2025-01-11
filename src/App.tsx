@@ -1,4 +1,5 @@
 import Home from "./Home"
+import Projects from "./Projects"
 import Services from "./Services"
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <div className="app w-full bg-custom-dark">
         <Home />
         <Services />
+        <Projects />
       </div>
     </>
   )

@@ -61,7 +61,7 @@ function Services() {
               <p className="text-slate-400 text-sm">Clients</p>
             </div>
             <div className="count basis-[400px] py-6 px-10 text-center bg-custom-card">
-              <h1 className="text-4xl font-bold text-sky-600">20+</h1>
+              <h1 className="text-4xl font-bold text-sky-600">10+</h1>
               <p className="text-slate-400 text-sm">Projects</p>
             </div>
             <div className="count basis-[400px] py-6 px-10 text-center bg-custom-card">
