@@ -5,7 +5,11 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-function Home() {
+interface homeProps {
+  scrollToTarget: ()=>  void;
+}
+
+const Home: React.FC<homeProps> = ({scrollToTarget}) => {
 
   const buttonClasses = "px-4 py-2 text-white hover:text-sky-600 cursor-pointer hover:border-sky-600 transition-all mx-4";
   const responsiveBtnClasses = "p-6 hover:bg-custom-soft cursor-pointer hover:pl-7 border-custom";
@@ -18,7 +22,7 @@ function Home() {
         <div className="logo w-16 h-16 bg-white rounded-full"></div>
         <ul className="items-center sm:flex hidden">
           <li className={buttonClasses}>Home</li>
-          <li className={buttonClasses}>Projects</li>
+          <li className={buttonClasses} onClick={scrollToTarget}>Projects</li>
           <li className={buttonClasses}>About</li>
           <li className={buttonClasses}>Contact</li>
         </ul>

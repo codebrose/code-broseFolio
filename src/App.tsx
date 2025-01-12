@@ -1,16 +1,21 @@
+import { useRef } from "react";
 import Home from "./Home"
 import Projects from "./Projects"
 import Services from "./Services"
 
 function App() {
 
+  const targetRef = useRef<HTMLDivElement>(null); 
+
   return (
     <>
       
       <div className="app w-full bg-custom-dark">
-        <Home />
+        <Home scrollToTarget={()=> {targetRef.current?.scrollIntoView({behavior: "smooth"})}} />
         <Services />
-        <Projects />
+        <div ref={targetRef}>
+          <Projects />
+        </div>
       </div>
     </>
   )

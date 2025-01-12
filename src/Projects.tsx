@@ -1,7 +1,7 @@
 
 function Projects() {
   return (
-    <div className="projects w-full py-16 relative">
+    <div className="projects w-full py-16 relative" id="projects">
         <div className="bg-box w-full h-2/5 bg-custom-soft absolute left-0 bottom-40"></div>
         <div className="header lg:w-3/4 w-full mx-auto flex justify-between p-2 relative">
             <div className="text">
