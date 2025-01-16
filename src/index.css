@@ -12,6 +12,9 @@
   .bg-custom-card{
     background: #091d41;
   }
+  .bg-custom-card-2{
+    background: #091d41c2;
+  }
   .border-custom{
     border-bottom: 1px solid #051a3d;
   }

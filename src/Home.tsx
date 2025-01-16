@@ -3,7 +3,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Bottom from "./Bottom";
 
 interface homeProps {
   scrollToTarget: ()=>  void;
@@ -16,6 +18,14 @@ const Home: React.FC<homeProps> = ({scrollToTarget}) => {
 
   const [isHidden, setIsHidden] = useState(true);
 
+  const [showAbout, setShowAbout] = useState(false);
+
+  function triggerAbout() {
+    showAbout ? setShowAbout(false) : setShowAbout(true);
+  }
+
+  
+
   return (
     <div className="w-full sm:h-custom h-fit relative overflow-hidden">
       <nav className="lg:w-3/4 w-full mx-auto flex justify-between items-center p-6 sm:flex-nowrap">
@@ -23,7 +33,7 @@ const Home: React.FC<homeProps> = ({scrollToTarget}) => {
         <ul className="items-center sm:flex hidden">
           <li className={buttonClasses}>Home</li>
           <li className={buttonClasses} onClick={scrollToTarget}>Projects</li>
-          <li className={buttonClasses}>About</li>
+          <li className={buttonClasses} onClick={triggerAbout}>About</li>
           <li className={buttonClasses}>Contact</li>
         </ul>
         <div className={`responsiveNav absolute top-24 left-0 w-full ${isHidden ? 'h-0' : 'h-screen'} overflow-hidden bg-opacity-65 bg-custom-dark`}>
@@ -38,7 +48,7 @@ const Home: React.FC<homeProps> = ({scrollToTarget}) => {
       </nav>
       <div className="home lg:w-3/4 w-full mx-auto flex sm:flex-nowrap flex-wrap ">
         <div className="hero sm:basis-2/4 basis-full flex justify-center sm:order-1 order-2">
-          <img src="https://res.cloudinary.com/daul01w0g/image/upload/v1736075124/20250104_091927_neohtt.png" alt="hero" />
+          <img src="https://res.cloudinary.com/daul01w0g/image/upload/v1736680767/me_yeqyub.png" alt="hero" />
         </div>
         <div className="text sm:basis-2/4 basis-full flex items-center p-3 sm:text-left text-center sm:order-2 order-1">
           <div className="container">
@@ -59,6 +69,9 @@ const Home: React.FC<homeProps> = ({scrollToTarget}) => {
       <div className="bgSplit absolute w-full h-2/4 flex sm:bg-transparent bg-custom-soft">
         <div className="box1 basis-2/4 bg-custom-soft"></div>
         <div className="box basis-2/4"></div>
+      </div>
+      <div className={`aboutPop ${showAbout ? 'block' : 'hidden'}`}>
+        <Bottom closeAbout={triggerAbout}/>
       </div>
     </div>
   )
